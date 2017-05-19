@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,128 +9,104 @@
     tools:context="com.example.julian.bleep.LoginActivity"
     android:background="@drawable/login_background">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-        
-        <ImageView
-            android:layout_marginTop="30dp"
-            android:layout_width="200dp"
-            android:layout_height="100dp"
-            android:src="@drawable/logofinal"
-            android:layout_gravity="center"
-            android:tint="@android:color/white"/>
+        android:layout_height="match_parent">
 
-        <EditText
-
-            android:id="@+id/editTextEmail"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:background="#D81B60"
-            android:drawableLeft="@drawable/ic_person_black_24dp"
-            android:drawablePadding="10dp"
-            android:drawableTint="@android:color/white"
-            android:hint="@string/prompt_email"
-            android:padding="10dp"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white" />
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:padding="20dp">
 
-        <EditText
-            android:id="@+id/editTextPass"
-            android:layout_marginTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#D81B60"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white"
-            android:padding="10dp"
-            android:hint="@string/prompt_password"
-            android:drawableLeft="@drawable/ic_lock_black_24dp"
-            android:drawablePadding="10dp"
-            android:drawableTint="@android:color/white"/>
+            <ImageView
 
-        <Button
-            android:id="@+id/buttonLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:background="#CE93D8"
-            android:text="@string/action_sign_in_short"
-            android:onClick="onClick2"
-            android:textColor="@android:color/white" />
+                android:id="@+id/imageView"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/logofinal"
+                android:tint="@android:color/white" />
 
-        <Button
-            android:id="@+id/buttonRegister"
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#CE93D8"
-            android:text="@string/action_sign_in"
-            android:onClick="onClick"
-            android:textColor="@android:color/white" />
+            <EditText
+
+                android:id="@+id/et_login_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:background="@color/colorPrimary"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:drawablePadding="10dp"
+                android:drawableTint="@android:color/white"
+                android:hint="@string/username_email"
+                android:padding="10dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white" />
+
+            <EditText
+                android:id="@+id/et_login_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimary"
+                android:drawableLeft="@drawable/ic_lock_black_24dp"
+                android:drawablePadding="10dp"
+                android:drawableTint="@android:color/white"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white" />
+
+            <Button
+                android:id="@+id/btn_login_sign_in"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorButtonPrimary"
+                android:onClick="onClick2"
+
+                android:text="@string/sign_in"
+                android:textColor="@android:color/white"
+
+                />
+
+            <Button
+                android:id="@+id/btn_login_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorButtonPrimary"
+                android:onClick="onClick"
+                android:text="@string/register"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:paddingTop="20dp">
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center">
 
-            <ImageButton
+            <TextView
+                android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/circle_button"
-                android:src="@drawable/ic_facebook"
-                android:tint="@android:color/white"
-                android:layout_margin="5dp"/>
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/circle_button"
-                android:src="@drawable/ic_twitter"
-                android:tint="@android:color/white"
-                android:layout_margin="5dp"/>
+                android:padding="30dp"
+                android:text="@string/recover_password"
+                android:textColor="@android:color/white" />
 
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/circle_button"
-                android:src="@drawable/ic_google"
-                android:tint="@android:color/white"
-                android:layout_margin="5dp"/>
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/circle_button"
-                android:src="@drawable/ic_github"
-                android:tint="@android:color/white"
-                android:layout_margin="5dp"/>
+
         </LinearLayout>
 
 
-    </LinearLayout>
+    </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:layout_marginBottom="10dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/action_remember_mail"
-            android:textColor="@android:color/white" />
-
-
-    </LinearLayout>
-
-</RelativeLayout>
-
-
+</android.support.design.widget.CoordinatorLayout>

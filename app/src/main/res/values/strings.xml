@@ -1,34 +1,29 @@
 <resources>
-    <string name="action_settings">Settings</string>
-    <string name="app_name">Bleep</string>
-    <string name="welcome_text">La musica que te gusta, donde sea</string>
-    <string name="welcome_text_footer">Se parte del proyecto en mejorando.la/sfotipy</string>
-    <string name="register">Registrate</string>
-    <string name="login">Ingresa</string>
-    <string name="register_name">Nombre</string>
-    <string name="register_last_name">Apellido</string>
-    <string name="title_activity_my_music">MyMusic</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">Bleep Music</string>
+    <string name="username_email">Usuario o correo electronico</string>
+    <string name="password">Contraseña</string>
+    <string name="create_password">Contraseña</string>
+    <string name="repeat_password">Repita la Contraseña</string>
+    <string name="username">Nombre de Usuario</string>
+    <string name="name_lastname">Nombre y Apellido</string>
+    <string name="email">Correo Electronico</string>
+    <string name="sign_in">Iniciar Sesion</string>
+    <string name="register">Crear Cuenta de Bleep</string>
+    <string name="register_finish">Finalizar Registro</string>
+    <string name="recover_password">¿Olvidaste tu Contraseña?</string>
+    <string name="title_activity_referencia">ReferenciaActivity</string>
+    <string name="toolbar_register_activity">Crear Cuenta</string>
+    <string name="title_artist_name">Madeon</string>
+    <string name="title_song_name">Album-Mix</string>
+    <string name="title_tabs_search">Buscar</string>
+    <string name="title_tabs_music">Musica</string>
+    <string name="title_tabs_profile">Mi Perfil</string>
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="hello_blank_fragment2">Hello blank fragment2</string>
+    <string name="title_activity_main">MainActivity</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="title_activity_login">Sign in</string>
 
-    <!-- Strings related to login -->
-    <string name="prompt_email">Usuario o correo electronico</string>
-    <string name="prompt_password">Contraseña</string>
-    <string name="prompt_repeat_password">Repita su contraseña</string>
-    <string name="action_sign_in">Crear cuenta de Bleep</string>
-    <string name="action_sign_in_short">Iniciar Sesion</string>
-    <string name="action_remember_mail">¿Olvidaste tu contraseña?</string>
-    <string name="error_invalid_email">El correo es invalido</string>
-    <string name="error_invalid_password">La contraseña es muy corta</string>
-    <string name="error_incorrect_password">Contraseña Incorrecta</string>
-    <string name="error_field_required">Esta campo es requerido</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
-    </string>
-
+    <string name="action_settings">Settings</string>
 </resources>

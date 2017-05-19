@@ -1,25 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.julian.bleep.LoginActivity"
+    android:background="@drawable/login_background">
+
+    <include layout="@layout/action_bar_toolbar"/>
+<RelativeLayout
+
 android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context="com.example.julian.bleep.LoginActivity"
-android:background="@drawable/login_background">
+android:layout_height="match_parent">
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="16dp">
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="200dp"
-            android:layout_height="100dp"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
             android:layout_gravity="center"
-            android:layout_marginTop="5dp"
             android:src="@drawable/logofinal"
-            android:tint="@android:color/white" />
+            android:tint="@android:color/white"
+            android:layout_marginTop="30dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,7 +38,7 @@ android:background="@drawable/login_background">
             android:orientation="horizontal">
 
             <EditText
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -35,14 +46,14 @@ android:background="@drawable/login_background">
                 android:background="#D81B60"
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
-                android:padding="10dp"
-                android:hint="Nombre"
+                android:padding="6dp"
+                android:hint="@string/username"
                 android:drawableLeft="@drawable/ic_person_black_24dp"
                 android:drawablePadding="10dp"
                 android:drawableTint="@android:color/white"/>
 
             <EditText
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -50,8 +61,8 @@ android:background="@drawable/login_background">
                 android:background="#D81B60"
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
-                android:padding="10dp"
-                android:hint="Apellido"
+                android:padding="6dp"
+                android:hint="@string/name_lastname"
                 android:drawableLeft="@drawable/ic_person_black_24dp"
                 android:drawablePadding="10dp"
                 android:drawableTint="@android:color/white"/>
@@ -67,8 +78,8 @@ android:background="@drawable/login_background">
             android:background="#D81B60"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
-            android:padding="10dp"
-            android:hint="Correo electronico"
+            android:padding="6dp"
+            android:hint="@string/email"
             android:drawableLeft="@drawable/ic_email_black_24dp"
             android:drawablePadding="10dp"
             android:drawableTint="@android:color/white"/>
@@ -87,11 +98,12 @@ android:background="@drawable/login_background">
                 android:background="#D81B60"
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
-                android:padding="10dp"
-                android:hint="Contraseña"
+                android:padding="6dp"
+                android:hint="@string/password"
                 android:drawableLeft="@drawable/ic_lock_black_24dp"
                 android:drawablePadding="10dp"
-                android:drawableTint="@android:color/white"/>
+                android:drawableTint="@android:color/white"
+                android:inputType="textPassword"/>
 
             <EditText
                 android:layout_marginTop="5dp"
@@ -102,26 +114,79 @@ android:background="@drawable/login_background">
                 android:background="#D81B60"
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
-                android:padding="10dp"
-                android:hint="Repita la contraseña"
+                android:padding="6dp"
+                android:hint="@string/repeat_password"
                 android:drawableLeft="@drawable/ic_lock_black_24dp"
                 android:drawablePadding="10dp"
-                android:drawableTint="@android:color/white"/>
+                android:inputType="textPassword"
+                android:drawableTint="@android:color/white"
+                />
 
 
 
         </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
+            android:padding="6dp"
             android:background="#CE93D8"
-            android:text="Finalizar Registro"
+            android:text="@string/register_finish"
             android:textColor="@android:color/white"
             android:onClick="onClick"/>
 
+</LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+
+            >
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circle_button"
+                android:src="@drawable/ic_facebook"
+                android:tint="@android:color/white"
+                android:layout_marginLeft="10dp"
+
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circle_button"
+                android:src="@drawable/ic_twitter"
+                android:tint="@android:color/white"
+                android:layout_marginLeft="10dp"
+                />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circle_button"
+                android:src="@drawable/ic_google"
+                android:tint="@android:color/white"
+                android:layout_marginLeft="10dp"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circle_button"
+                android:src="@drawable/ic_github"
+                android:tint="@android:color/white"
+                android:layout_marginLeft="10dp"
+                />
+        </LinearLayout>
     </LinearLayout>
 
 
@@ -131,3 +196,5 @@ android:background="@drawable/login_background">
 
 
 </RelativeLayout>
+
+    </android.support.design.widget.CoordinatorLayout>

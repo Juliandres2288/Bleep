@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,14 +9,21 @@
     tools:context="com.example.julian.bleep.LoginActivity"
     android:background="@drawable/login_background">
 
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:padding="40dp"
+       >
 
         <ImageView
-            android:layout_marginTop="0dp"
+
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:src="@drawable/logofinal"
@@ -22,32 +31,33 @@
             android:tint="@android:color/white"/>
 
         <EditText
-            android:id="@+id/editTextEmail"
-            android:layout_marginTop="5dp"
+            android:id="@+id/et_login_username"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#D81B60"
+            android:background="@color/colorPrimary"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
             android:padding="10dp"
-            android:hint="@string/prompt_email"
+            android:hint="@string/username_email"
             android:drawableLeft="@drawable/ic_person_black_24dp"
             android:drawablePadding="10dp"
             android:drawableTint="@android:color/white"/>
 
         <EditText
-            android:id="@+id/editTextPass"
-            android:layout_marginTop="3dp"
+            android:id="@+id/et_login_pass"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#D81B60"
+            android:background="@color/colorPrimary"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
             android:padding="10dp"
-            android:hint="@string/prompt_password"
+            android:hint="@string/password"
             android:drawableLeft="@drawable/ic_lock_black_24dp"
             android:drawablePadding="10dp"
-            android:drawableTint="@android:color/white"/>
+            android:drawableTint="@android:color/white"
+            android:inputType="textPassword"/>
 
 
         <LinearLayout
@@ -61,62 +71,25 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginRight="5dp"
-                android:layout_marginTop="10dp"
-                android:background="#CE93D8"
-                android:text="@string/action_sign_in_short"
-                android:textColor="@android:color/white" />
+                android:layout_marginTop="20dp"
+                android:background="@color/colorButtonPrimary"
+                android:text="@string/sign_in"
+                android:textColor="@android:color/white"
+                android:onClick="onClick2"/>
 
             <Button
                 android:id="@+id/buttonRegister"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_marginLeft="5dp"
                 android:layout_height="wrap_content"
-                android:background="#CE93D8"
-                android:text="@string/action_sign_in"
+                android:background="@color/colorButtonPrimary"
+                android:text="@string/register"
                 android:textColor="@android:color/white"
                 android:onClick="onClick"/>
 
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:paddingTop="5dp">
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/circle_button"
-                android:src="@drawable/ic_facebook"
-                android:tint="@android:color/white"
-                android:layout_margin="5dp"/>
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/circle_button"
-                android:src="@drawable/ic_twitter"
-                android:tint="@android:color/white"
-                android:layout_margin="5dp"/>
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/circle_button"
-                android:src="@drawable/ic_google"
-                android:tint="@android:color/white"
-                android:layout_margin="5dp"/>
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/circle_button"
-                android:src="@drawable/ic_github"
-                android:tint="@android:color/white"
-                android:layout_margin="5dp"/>
-        </LinearLayout>
-
 
     </LinearLayout>
 
@@ -127,13 +100,16 @@
         android:gravity="center"
         android:layout_marginBottom="6dp">
 
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/action_remember_mail"
+            android:text="@string/recover_password"
             android:textColor="@android:color/white"/>
 
 
     </LinearLayout>
 
 </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,8 +1,10 @@
-package com.example.julian.bleep;
+package com.example.julian.bleep.view_activitys;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+
+import com.example.julian.bleep.R;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -10,7 +12,7 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        showToolbar("Bleep", false);
+        showToolbar(getResources().getString(R.string.app_name),false);
 
 
 
